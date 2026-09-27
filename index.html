@@ -15,7 +15,7 @@
             --text-main: #5a5250;
             --text-light: #8c827f;
             --border-color: #f2efe9;
-            --shadow: 0 10px 30px rgba(156, 175, 136, 0.12);
+            --shadow: 0 15px 35px rgba(156, 175, 136, 0.12);
         }
 
         * {
@@ -31,12 +31,13 @@
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            padding: 20px;
+            padding: 30px 15px;
         }
 
-        .phone-container {
+        /* ขยายขนาดคอนเทนเนอร์ให้กว้างและเต็มตาขึ้น */
+        .main-wrapper {
             width: 100%;
-            max-width: 480px;
+            max-width: 760px;
             background: var(--card-bg);
             border-radius: 36px;
             box-shadow: var(--shadow);
@@ -48,24 +49,24 @@
 
         /* Header & Cover */
         .cover-section {
-            height: 160px;
+            height: 200px;
             background: linear-gradient(135deg, #e8c5c8, #9caf88);
             position: relative;
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            padding-bottom: 50px;
+            padding-bottom: 55px;
         }
 
         .profile-container {
             position: absolute;
-            bottom: -35px;
-            width: 90px;
-            height: 90px;
+            bottom: -40px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background: #fff;
             padding: 4px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
             animation: floatProfile 3s ease-in-out infinite;
         }
 
@@ -83,36 +84,36 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 36px;
+            font-size: 42px;
         }
 
         .shop-info {
             text-align: center;
-            padding: 45px 20px 15px;
+            padding: 50px 20px 15px;
         }
 
         .shop-title {
-            font-size: 22px;
+            font-size: 26px;
             font-weight: 600;
             color: #4a4240;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .shop-bio {
-            font-size: 13px;
+            font-size: 14px;
             color: var(--text-light);
-            margin-top: 4px;
+            margin-top: 6px;
         }
 
         /* Stats */
         .stats-row {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            padding: 10px 0 20px;
+            gap: 60px;
+            padding: 12px 0 24px;
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -122,21 +123,21 @@
 
         .stat-num {
             font-weight: 600;
-            font-size: 16px;
+            font-size: 18px;
             color: #5a5250;
         }
 
         .stat-label {
-            font-size: 11px;
+            font-size: 12px;
             color: var(--text-light);
         }
 
         /* Music Player Widget */
         .music-widget {
-            margin: 15px 20px;
+            margin: 20px 30px;
             background: #f7f5f0;
             border-radius: 20px;
-            padding: 10px 16px;
+            padding: 12px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -145,34 +146,34 @@
         .music-left {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
         }
 
         .music-icon {
-            width: 36px;
-            height: 36px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: var(--primary-green);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .music-details .song-name {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
         }
 
         .music-details .artist-name {
-            font-size: 11px;
+            font-size: 12px;
             color: var(--text-light);
         }
 
         .play-btn {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: #d8c2c4;
             border: none;
@@ -181,62 +182,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
-        }
-
-        /* Contact Section */
-        .contact-box {
-            margin: 10px 20px 20px;
-            background: #faf8f5;
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .contact-title {
-            font-size: 12px;
-            color: var(--text-light);
-            margin-bottom: 10px;
-        }
-
-        .contact-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: #ffffff;
-            border: 1px solid #e8e3dc;
-            padding: 10px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-main);
             font-size: 13px;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .contact-btn:hover {
-            background: #f2efe9;
         }
 
         /* Main Content Container */
         .main-content {
-            padding: 0 20px 25px;
+            padding: 0 30px 30px;
             flex: 1;
         }
 
         .section-card {
             background: #faf8f5;
-            border-radius: 20px;
-            padding: 16px;
-            margin-bottom: 15px;
+            border-radius: 24px;
+            padding: 20px;
+            margin-bottom: 20px;
             border: 1px solid var(--border-color);
         }
 
@@ -244,59 +203,91 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 10px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
         .filter-label {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
             color: var(--text-main);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .month-select {
-            padding: 6px 12px;
-            border-radius: 10px;
+            padding: 8px 14px;
+            border-radius: 12px;
             border: 1px solid #e2ddd5;
             background: #fff;
-            font-size: 12px;
+            font-size: 13px;
             color: var(--text-main);
             outline: none;
         }
 
+        /* ช่องค้นหาชื่อ */
+        .search-box {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 14px 10px 38px;
+            border-radius: 12px;
+            border: 1px solid #e2ddd5;
+            background: #fff;
+            font-size: 13px;
+            color: var(--text-main);
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(156, 175, 136, 0.15);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
         .table-title-area {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .table-title {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             color: var(--text-main);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .table-subtitle {
-            font-size: 11px;
+            font-size: 12px;
             color: var(--text-light);
-            margin-top: 2px;
+            margin-top: 3px;
         }
 
         /* Status Legends */
         .status-legends {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 12px;
+            gap: 8px;
+            margin-bottom: 15px;
         }
 
         .legend-badge {
-            font-size: 10px;
-            padding: 3px 8px;
+            font-size: 11px;
+            padding: 4px 10px;
             border-radius: 8px;
             font-weight: 500;
         }
@@ -306,7 +297,7 @@
             width: 100%;
             overflow-x: auto;
             background: #ffffff;
-            border-radius: 14px;
+            border-radius: 16px;
             border: 1px solid var(--border-color);
         }
 
@@ -314,22 +305,25 @@
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         .queue-table th {
             background: #f4f1ea;
             color: #6a605d;
-            padding: 10px 12px;
+            padding: 12px 16px;
             font-weight: 600;
             white-space: nowrap;
         }
 
         .queue-table td {
-            padding: 10px 12px;
+            padding: 12px 16px;
             border-bottom: 1px solid #f7f5f0;
             color: var(--text-main);
-            white-space: nowrap;
+        }
+
+        .queue-table tr:hover td {
+            background: #fcfbfa;
         }
 
         .queue-table tr:last-child td {
@@ -340,16 +334,17 @@
         .status-pill {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            padding: 3px 10px;
-            border-radius: 6px;
-            font-size: 10px;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 11px;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         .status-dot {
-            width: 6px;
-            height: 6px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             display: inline-block;
             animation: pulseGlow 1.5s infinite;
@@ -379,17 +374,60 @@
         .status-pending { background: #ffebee; color: #c62828; }
         .status-pending .status-dot { background: #c62828; }
 
+        /* Contact Section */
+        .contact-box {
+            margin: 10px 0 0;
+            background: #faf8f5;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .contact-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #ffffff;
+            border: 1px solid #e8e3dc;
+            padding: 12px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .contact-btn:hover {
+            background: #f2efe9;
+            transform: translateY(-2px);
+        }
+
         .loading-text {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             color: var(--text-light);
-            font-size: 12px;
+            font-size: 13px;
         }
     </style>
 </head>
 <body>
 
-<div class="phone-container">
+<div class="main-wrapper">
     <!-- Header / Cover -->
     <div class="cover-section">
         <div class="profile-container">
@@ -399,7 +437,7 @@
 
     <div class="shop-info">
         <div class="shop-title">
-            <span>pimmuki shop</span> <i class="fa-solid fa-circle-check" style="color: #9caf88; font-size: 16px;"></i>
+            <span>pimmuki shop</span> <i class="fa-solid fa-circle-check" style="color: #9caf88; font-size: 18px;"></i>
         </div>
         <div class="shop-bio">✨🤍 รับทำป้าย RoV สวยๆ ตรงบรีฟ 🐰ྀི</div>
     </div>
@@ -454,6 +492,12 @@
                 <div class="table-subtitle">เช็คสถานะคิวงานป้าย RoV จาก Google Sheets แบบเรียลไทม์</div>
             </div>
 
+            <!-- Search Box -->
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาชื่อลูกค้า หรือรายละเอียดคิวงาน..." onkeyup="filterQueueTable()">
+            </div>
+
             <!-- Status Legends -->
             <div class="status-legends">
                 <span class="legend-badge status-briefed">บรีฟแล้ว</span>
@@ -500,8 +544,8 @@
 
 <script>
     const SPREADSHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/188TKp4WGFyzIvw67GGPZOqvpub8kDAgtO0zPB0hLH3c/gviz/tq?tqx=out:csv";
+    let allQueueData = [];
 
-    // ฟังก์ชันทำความสะอาดข้อความ (ลบเครื่องหมายคำพูด/ฟันหนู และช่องว่างส่วนเกินออกทั้งหมด)
     function cleanText(text) {
         if (!text) return '';
         return text.replace(/^["']|["']$/g, '').replace(/^"+\vert{}"+$/g, '').trim();
@@ -527,42 +571,60 @@
                 return row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(val => cleanText(val));
             });
 
-            const tbody = document.getElementById('client-queue-tbody');
-            tbody.innerHTML = '';
-
-            let hasData = false;
+            allQueueData = [];
             for (let i = 1; i < rows.length; i++) {
                 const cols = rows[i];
                 if (cols.length >= 4 && cols[0]) {
-                    hasData = true;
-                    const qId = cleanText(cols[0]);
-                    const customerName = cleanText(cols[1]);
-                    const status = cleanText(cols[3]);
-                    const statusClass = getStatusClass(status);
-
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td style="font-weight: 600;">${qId}</td>
-                        <td>${customerName}</td>
-                        <td>
-                            <span class="status-pill ${statusClass}">
-                                <span class="status-dot"></span> ${status}
-                            </span>
-                        </td>
-                    `;
-                    tbody.appendChild(tr);
+                    allQueueData.push({
+                        id: cleanText(cols[0]),
+                        name: cleanText(cols[1]),
+                        status: cleanText(cols[3])
+                    });
                 }
             }
 
-            if (!hasData) {
-                tbody.innerHTML = `<tr><td colspan="3" class="loading-text">ยังไม่มีข้อมูลคิวงานใน Google Sheet</td></tr>`;
-            }
+            renderTable(allQueueData);
 
         } catch (error) {
             console.error("Error loading sheet:", error);
             const tbody = document.getElementById('client-queue-tbody');
             tbody.innerHTML = `<tr><td colspan="3" class="loading-text" style="color: #c62828;">ไม่สามารถโหลดข้อมูลได้ กรุณาตรวจสอบการแชร์ Google Sheet</td></tr>`;
         }
+    }
+
+    function renderTable(data) {
+        const tbody = document.getElementById('client-queue-tbody');
+        tbody.innerHTML = '';
+
+        if (data.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="3" class="loading-text">ไม่พบข้อมูลคิวงานที่ค้นหา</td></tr>`;
+            return;
+        }
+
+        data.forEach(item => {
+            const statusClass = getStatusClass(item.status);
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td style="font-weight: 600;">${item.id}</td>
+                <td>${item.name}</td>
+                <td>
+                    <span class="status-pill ${statusClass}">
+                        <span class="status-dot"></span> ${item.status}
+                    </span>
+                </td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    function filterQueueTable() {
+        const keyword = document.getElementById('searchInput').value.toLowerCase();
+        const filtered = allQueueData.filter(item => 
+            item.id.toLowerCase().includes(keyword) || 
+            item.name.toLowerCase().includes(keyword) || 
+            item.status.toLowerCase().includes(keyword)
+        );
+        renderTable(filtered);
     }
 
     window.onload = () => {
