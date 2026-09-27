@@ -15,7 +15,7 @@
             --text-main: #5a5250;
             --text-light: #8c827f;
             --border-color: #f2efe9;
-            --shadow: 0 15px 35px rgba(156, 175, 136, 0.12);
+            --shadow: 0 10px 30px rgba(156, 175, 136, 0.12);
         }
 
         * {
@@ -31,12 +31,13 @@
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            padding: 30px 15px;
+            padding: 20px 15px;
         }
 
-        .main-wrapper {
+        /* 📱 ปรับขนาดให้พอดีกับหน้าจอโทรศัพท์ */
+        .phone-container {
             width: 100%;
-            max-width: 760px;
+            max-width: 480px;
             background: var(--card-bg);
             border-radius: 36px;
             box-shadow: var(--shadow);
@@ -48,24 +49,24 @@
 
         /* Header & Cover */
         .cover-section {
-            height: 200px;
+            height: 160px;
             background: linear-gradient(135deg, #e8c5c8, #9caf88);
             position: relative;
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            padding-bottom: 55px;
+            padding-bottom: 50px;
         }
 
         .profile-container {
             position: absolute;
-            bottom: -40px;
-            width: 100px;
-            height: 100px;
+            bottom: -35px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             background: #fff;
             padding: 4px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             animation: floatProfile 3s ease-in-out infinite;
         }
 
@@ -83,36 +84,36 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 42px;
+            font-size: 36px;
         }
 
         .shop-info {
             text-align: center;
-            padding: 50px 20px 15px;
+            padding: 45px 20px 15px;
         }
 
         .shop-title {
-            font-size: 26px;
+            font-size: 22px;
             font-weight: 600;
             color: #4a4240;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .shop-bio {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-light);
-            margin-top: 6px;
+            margin-top: 4px;
         }
 
         /* Stats */
         .stats-row {
             display: flex;
             justify-content: center;
-            gap: 60px;
-            padding: 12px 0 24px;
+            gap: 40px;
+            padding: 10px 0 20px;
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -122,21 +123,21 @@
 
         .stat-num {
             font-weight: 600;
-            font-size: 18px;
+            font-size: 16px;
             color: #5a5250;
         }
 
         .stat-label {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-light);
         }
 
         /* Music Player Widget */
         .music-widget {
-            margin: 20px 30px;
+            margin: 15px 20px;
             background: #f7f5f0;
             border-radius: 20px;
-            padding: 12px 20px;
+            padding: 10px 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -145,34 +146,34 @@
         .music-left {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
         }
 
         .music-icon {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: var(--primary-green);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .music-details .song-name {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
         }
 
         .music-details .artist-name {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-light);
         }
 
         .play-btn {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             background: #d8c2c4;
             border: none;
@@ -181,20 +182,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         /* Main Content Container */
         .main-content {
-            padding: 0 30px 30px;
+            padding: 0 20px 20px;
             flex: 1;
         }
 
         .section-card {
             background: #faf8f5;
-            border-radius: 24px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 20px;
+            padding: 16px;
+            margin-bottom: 15px;
             border: 1px solid var(--border-color);
         }
 
@@ -202,25 +203,25 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .filter-label {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             color: var(--text-main);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .month-select {
-            padding: 8px 14px;
-            border-radius: 12px;
+            padding: 6px 12px;
+            border-radius: 10px;
             border: 1px solid #e2ddd5;
             background: #fff;
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-main);
             outline: none;
         }
@@ -228,16 +229,16 @@
         /* ช่องค้นหาชื่อ */
         .search-box {
             position: relative;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .search-input {
             width: 100%;
-            padding: 10px 14px 10px 38px;
-            border-radius: 12px;
+            padding: 8px 12px 8px 34px;
+            border-radius: 10px;
             border: 1px solid #e2ddd5;
             background: #fff;
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-main);
             outline: none;
             transition: all 0.2s;
@@ -245,48 +246,48 @@
 
         .search-input:focus {
             border-color: var(--primary-green);
-            box-shadow: 0 0 0 3px rgba(156, 175, 136, 0.15);
+            box-shadow: 0 0 0 2px rgba(156, 175, 136, 0.15);
         }
 
         .search-icon {
             position: absolute;
-            left: 12px;
+            left: 10px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-light);
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .table-title-area {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .table-title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             color: var(--text-main);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .table-subtitle {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-light);
-            margin-top: 3px;
+            margin-top: 2px;
         }
 
         /* Status Legends */
         .status-legends {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
+            gap: 6px;
+            margin-bottom: 12px;
         }
 
         .legend-badge {
-            font-size: 11px;
-            padding: 4px 10px;
+            font-size: 10px;
+            padding: 3px 8px;
             border-radius: 8px;
             font-weight: 500;
         }
@@ -296,7 +297,7 @@
             width: 100%;
             overflow-x: auto;
             background: #ffffff;
-            border-radius: 16px;
+            border-radius: 14px;
             border: 1px solid var(--border-color);
         }
 
@@ -304,21 +305,22 @@
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .queue-table th {
             background: #f4f1ea;
             color: #6a605d;
-            padding: 12px 16px;
+            padding: 10px 12px;
             font-weight: 600;
             white-space: nowrap;
         }
 
         .queue-table td {
-            padding: 12px 16px;
+            padding: 10px 12px;
             border-bottom: 1px solid #f7f5f0;
             color: var(--text-main);
+            white-space: nowrap;
         }
 
         .queue-table tr:hover td {
@@ -333,17 +335,16 @@
         .status-pill {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 4px 12px;
-            border-radius: 8px;
-            font-size: 11px;
+            gap: 5px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 10px;
             font-weight: 500;
-            white-space: nowrap;
         }
 
         .status-dot {
-            width: 7px;
-            height: 7px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             display: inline-block;
             animation: pulseGlow 1.5s infinite;
@@ -375,23 +376,23 @@
 
         /* Contact Section */
         .contact-box {
-            margin: 10px 0 0;
+            margin: 5px 0 0;
             background: #faf8f5;
             border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 18px;
+            border-radius: 16px;
+            padding: 14px;
             text-align: center;
         }
 
         .contact-title {
-            font-size: 13px;
+            font-size: 11px;
             color: var(--text-light);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .contact-buttons {
             display: flex;
-            gap: 12px;
+            gap: 8px;
         }
 
         .contact-btn {
@@ -399,50 +400,52 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             background: #ffffff;
             border: 1px solid #e8e3dc;
-            padding: 12px;
-            border-radius: 14px;
+            padding: 10px;
+            border-radius: 12px;
             text-decoration: none;
             color: var(--text-main);
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 500;
             transition: all 0.2s;
         }
 
         .contact-btn:hover {
             background: #f2efe9;
-            transform: translateY(-2px);
         }
 
         /* 🌸 ปกหลัง (Footer Cover) */
         .footer-cover {
-            height: 120px;
+            height: 90px;
             background: linear-gradient(135deg, #9caf88, #e8c5c8);
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #ffffff;
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 500;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            letter-spacing: 1px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            letter-spacing: 0.5px;
             border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 0 15px;
         }
 
         .loading-text {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             color: var(--text-light);
-            font-size: 13px;
+            font-size: 12px;
         }
     </style>
 </head>
 <body>
 
-<div class="main-wrapper">
+<div class="phone-container">
+    <!-- Header / Cover -->
     <div class="cover-section">
         <div class="profile-container">
             <div class="profile-img">🧸</div>
@@ -451,11 +454,12 @@
 
     <div class="shop-info">
         <div class="shop-title">
-            <span>pimmuki shop</span> <i class="fa-solid fa-circle-check" style="color: #9caf88; font-size: 18px;"></i>
+            <span>pimmuki shop</span> <i class="fa-solid fa-circle-check" style="color: #9caf88; font-size: 16px;"></i>
         </div>
         <div class="shop-bio">✨🤍 รับทำป้าย RoV สวยๆ ตรงบรีฟ 🐰ྀི</div>
     </div>
 
+    <!-- Stats -->
     <div class="stats-row">
         <div class="stat-item">
             <div class="stat-num">100</div>
@@ -467,6 +471,7 @@
         </div>
     </div>
 
+    <!-- Music Player -->
     <div class="music-widget">
         <div class="music-left">
             <div class="music-icon"><i class="fa-solid fa-music"></i></div>
@@ -478,8 +483,10 @@
         <button class="play-btn"><i class="fa-solid fa-play"></i></button>
     </div>
 
+    <!-- Main Content -->
     <div class="main-content">
         
+        <!-- Section 1: Month Filter -->
         <div class="section-card">
             <div class="filter-header">
                 <div class="filter-label">
@@ -493,6 +500,7 @@
             </div>
         </div>
 
+        <!-- Section 2: Queue Table -->
         <div class="section-card">
             <div class="table-title-area">
                 <div class="table-title">
@@ -501,11 +509,13 @@
                 <div class="table-subtitle">เช็คสถานะคิวงานป้าย RoV จาก Google Sheets แบบเรียลไทม์</div>
             </div>
 
+            <!-- Search Box -->
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาชื่อลูกค้า หรือรายละเอียดคิวงาน..." onkeyup="filterQueueTable()">
             </div>
 
+            <!-- Status Legends -->
             <div class="status-legends">
                 <span class="legend-badge status-briefed">บรีฟแล้ว</span>
                 <span class="legend-badge status-revision">รอบรีฟ</span>
@@ -533,6 +543,7 @@
             </div>
         </div>
 
+        <!-- Contact Box -->
         <div class="contact-box">
             <div class="contact-title">- 🤍 ∞ ────── contact ────── ∞ 🤍 -</div>
             <div class="contact-buttons">
@@ -547,6 +558,7 @@
 
     </div>
 
+    <!-- 🌸 ส่วนปกหลัง (Footer Cover) -->
     <div class="footer-cover">
         <span>✨ pimmuki shop • Thank you for supporting us 🤍</span>
     </div>
