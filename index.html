@@ -66,6 +66,12 @@
             background: #fff;
             padding: 4px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            animation: floatProfile 3s ease-in-out infinite;
+        }
+
+        @keyframes floatProfile {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
 
         .profile-img {
@@ -134,6 +140,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            transition: transform 0.2s;
+        }
+
+        .music-widget:hover {
+            transform: scale(1.01);
         }
 
         .music-left {
@@ -176,6 +187,11 @@
             align-items: center;
             justify-content: center;
             font-size: 12px;
+            transition: background 0.2s;
+        }
+
+        .play-btn:hover {
+            background: #c7b0b2;
         }
 
         /* Contact Section */
@@ -218,6 +234,7 @@
 
         .contact-btn:hover {
             background: #f2efe9;
+            transform: translateY(-2px);
         }
 
         /* Main Content Container */
@@ -259,6 +276,7 @@
             font-size: 12px;
             color: var(--text-main);
             outline: none;
+            cursor: pointer;
         }
 
         .table-title-area {
@@ -324,56 +342,60 @@
             border-bottom: 1px solid #f7f5f0;
             color: var(--text-main);
             white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .queue-table tr:hover td {
+            background: #fcfbfa;
         }
 
         .queue-table tr:last-child td {
             border-bottom: none;
         }
 
-        /* Status Badges */
+        /* Status Badges with Glowing Pulse Effect */
         .status-pill {
-            display: inline-block;
-            padding: 3px 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 3px 10px;
             border-radius: 6px;
             font-size: 10px;
             font-weight: 500;
         }
 
+        /* ไฟสถานะดวงเล็กกระพริบ */
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulseGlow 1.5s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); }
+            70% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 0 4px rgba(0, 0, 0, 0); }
+            100% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+        }
+
         .status-briefed { background: #e3edfc; color: #3b71ca; }
+        .status-briefed .status-dot { background: #3b71ca; }
+
         .status-revision { background: #fef0d8; color: #b87a00; }
+        .status-revision .status-dot { background: #b87a00; }
+
         .status-doing { background: #e2f7e4; color: #2e7d32; }
+        .status-doing .status-dot { background: #2e7d32; }
+
         .status-done { background: #e8f5e9; color: #1b5e20; }
+        .status-done .status-dot { background: #1b5e20; }
+
         .status-paid { background: #e0f2f1; color: #00695c; }
+        .status-paid .status-dot { background: #00695c; }
+
         .status-pending { background: #ffebee; color: #c62828; }
-
-        /* Navigation Tab Bar */
-        .nav-tabs {
-            display: flex;
-            padding: 10px 20px 20px;
-            background: #ffffff;
-            border-top: 1px solid var(--border-color);
-            gap: 10px;
-        }
-
-        .nav-tab {
-            flex: 1;
-            padding: 10px;
-            border-radius: 14px;
-            border: none;
-            background: #f7f5f0;
-            color: var(--text-light);
-            font-size: 12px;
-            font-weight: 500;
-            cursor: pointer;
-            text-align: center;
-            transition: all 0.2s;
-        }
-
-        .nav-tab.active {
-            background: var(--primary-green);
-            color: white;
-            box-shadow: 0 4px 10px rgba(156, 175, 136, 0.3);
-        }
+        .status-pending .status-dot { background: #c62828; }
 
         .loading-text {
             text-align: center;
@@ -408,7 +430,7 @@
         </div>
         <div class="stat-item">
             <div class="stat-num">0</div>
-            <div class="stat-label">reviews</div>
+            <div class="stat-label">orders</div>
         </div>
     </div>
 
@@ -492,12 +514,6 @@
         </div>
 
     </div>
-
-    <!-- Bottom Navigation Tabs -->
-    <div class="nav-tabs">
-        <button class="nav-tab active"><i class="fa-solid fa-heart" style="font-size: 10px;"></i> Main</button>
-        <button class="nav-tab"><i class="fa-regular fa-star" style="font-size: 10px;"></i> Reviews</button>
-    </div>
 </div>
 
 <script>
@@ -535,12 +551,17 @@
                     const qId = cols[0];
                     const customerName = cols[1];
                     const status = cols[3];
+                    const statusClass = getStatusClass(status);
 
                     const tr = document.createElement('tr');
                     tr.innerHTML = `
                         <td style="font-weight: 600;">${qId}</td>
                         <td>${customerName}</td>
-                        <td><span class="status-pill ${getStatusClass(status)}">${status}</span></td>
+                        <td>
+                            <span class="status-pill ${statusClass}">
+                                <span class="status-dot"></span> ${status}
+                            </span>
+                        </td>
                     `;
                     tbody.appendChild(tr);
                 }
