@@ -10,19 +10,56 @@
         :root {
             --bg-color: #f4f4f4;
             --card-bg: #ffffff;
-            --primary-accent: #6c757d; /* โทนเทาเงินหรูหรา */
+            --primary-accent: #6c757d;
             --text-main: #3a3a3a;
             --text-light: #7c7c7c;
             --border-color: #e5e5e5;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Prompt', sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); min-height: 100vh; display: flex; justify-content: center; padding: 20px 15px; }
-        .phone-container { width: 100%; max-width: 480px; background: var(--card-bg); border-radius: 36px; box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; border: 6px solid #fff; }
         
-        /* เปลี่ยน Cover เป็นโทนเทาเงินละมุนตามเรฟ */
-        .cover-section { height: 160px; background: linear-gradient(135deg, #d6d6d6, #8c9297); position: relative; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 50px; }
-        .profile-container { position: absolute; bottom: -35px; width: 90px; height: 90px; border-radius: 50%; background: #fff; padding: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        /* ☁️ พื้นหลังเว็บ: ลายจุด + ก้อนเมฆลอยไปมา */
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(#d1d5db 1.2px, transparent 1.2px), 
+                radial-gradient(#d1d5db 1.2px, var(--bg-color) 1.2px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px 15px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* เอฟเฟกต์ก้อนเมฆลอยพื้นหลัง */
+        body::before, body::after {
+            content: "☁️";
+            position: fixed;
+            font-size: 35px;
+            opacity: 0.35;
+            z-index: -1;
+            animation: floatCloud 25s linear infinite;
+        }
+        body::before { top: 15%; left: -10%; animation-duration: 30s; }
+        body::after { top: 60%; left: -15%; animation-duration: 22s; animation-delay: 5s; }
+
+        @keyframes floatCloud {
+            0% { transform: translateX(-50px); }
+            100% { transform: translateX(110vw); }
+        }
+
+        .phone-container { width: 100%; max-width: 480px; background: var(--card-bg); border-radius: 36px; box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; border: 6px solid #fff; position: relative; z-index: 1; }
+        
+        /* Cover ที่ใส่ภาพ GIF เรียบร้อย */
+        .cover-section { height: 160px; position: relative; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 50px; overflow: hidden; }
+        .cover-gif { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .cover-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.15); z-index: 2; }
+        
+        .profile-container { position: absolute; bottom: -35px; width: 90px; height: 90px; border-radius: 50%; background: #fff; padding: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); z-index: 3; }
         .profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: #eef0f2; display: flex; align-items: center; justify-content: center; font-size: 36px; }
         
         .shop-info { text-align: center; padding: 45px 20px 15px; }
@@ -95,7 +132,6 @@
         .nav-tab { flex: 1; padding: 10px; border-radius: 14px; border: none; background: #f8f9fa; color: var(--text-light); font-size: 12px; font-weight: 500; cursor: pointer; text-align: center; }
         .nav-tab.active { background: #6c757d; color: white; box-shadow: 0 4px 10px rgba(108, 117, 125, 0.3); }
         
-        /* ปกหลังโทนเทาเงิน */
         .footer-cover { height: 90px; background: linear-gradient(135deg, #8c9297, #d6d6d6); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 11px; font-weight: 500; border-top: 1px solid var(--border-color); text-align: center; padding: 0 15px; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
         .loading-text { text-align: center; padding: 20px; color: var(--text-light); font-size: 12px; }
     </style>
@@ -103,6 +139,8 @@
 <body>
 <div class="phone-container">
     <div class="cover-section">
+        <img src="EEFF7A31-A68C-44B9-95B5-2447B20C5FAB.gif" class="cover-gif" alt="Cover GIF">
+        <div class="cover-overlay"></div>
         <div class="profile-container"><div class="profile-img">🧸</div></div>
     </div>
     <div class="shop-info">
